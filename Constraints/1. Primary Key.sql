@@ -1,0 +1,12 @@
+CREATE TABLE sales.sales(
+	Order_ID INT NOT NULL, -- AUTO_INCREMENT,
+	Oder_Date DATE NOT NULL,
+	Customer_ID INT,
+	Product_ID VARCHAR(5),
+	sales DECIMAL(10,2),
+ -- PRIMARY KEY(Order_ID)
+CONSTRAINT pkey PRIMARY KEY(oRDER_ID, PRODUCT_ID)
+);
+
+
+DROP TABLE sales.sales;
