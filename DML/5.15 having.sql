@@ -21,4 +21,5 @@ FROM
     SALARIES
 GROUP BY emp_no
 HAVING Average_salary > 80000
-ORDER BY Start_date ASC;
+ORDER BY Start_date ASC
+LIMIT 10;
