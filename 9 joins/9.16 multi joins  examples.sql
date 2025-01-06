@@ -7,7 +7,7 @@ select * from salaries;
 SELECT 
     D.dept_name, 
     D_M.from_date, 
-    MAX(S.salary) AS max_salary
+    AVG(S.salary) AS avg_salary
 FROM
     departments D
     LEFT JOIN dept_manager D_M ON D.dept_no = D_M.dept_no
@@ -17,7 +17,7 @@ WHERE
 GROUP BY 
     D.dept_name, D_M.from_date
 ORDER BY 
-    max_salary DESC;
+    avg_salary DESC;
 
 
 
