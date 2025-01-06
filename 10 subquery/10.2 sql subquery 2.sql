@@ -18,3 +18,14 @@ HAVING AVG(A.salary) <= ALL (SELECT
     FROM
         salaries
     GROUP BY emp_no);
+    
+-- second way
+SELECT 
+    first_name, last_name
+FROM
+    employees
+WHERE
+    exists (SELECT 
+            *
+        FROM
+            dept_manager where employees.emp_no = dept_manager.emp_no ) ;
